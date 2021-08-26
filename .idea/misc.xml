@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/activity_login.xml" value="0.10371376811594203" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/activity_main.xml" value="0.13269927536231885" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/activity_start.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/fragment_album.xml" value="0.19429347826086957" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/fragment_chest.xml" value="0.19429347826086957" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/fragment_shop.xml" value="0.19429347826086957" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/menu/bottom_navigation.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
