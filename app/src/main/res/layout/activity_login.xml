@@ -13,8 +13,7 @@
     <EditText
         android:layout_width="350dp"
         android:layout_height="50dp"
-
-        android:hint="Email"
+        android:hint="@string/email"
         android:layout_marginTop="15dp"
         android:inputType="textEmailAddress"
         android:id="@+id/email"
@@ -23,7 +22,7 @@
     <EditText
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:layout_marginTop="15dp"
         android:inputType="textPassword"
         android:id="@+id/password"
@@ -33,14 +32,14 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/login"
-        android:text="Login"
+        android:text="@string/login"
         android:textColor="@android:color/white"
         android:layout_marginTop="15dp"/>
 
     <TextView
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:text="Don't have an account? Sign up"
+        android:text="@string/dont_count"
         android:id="@+id/txt_signup"
         android:layout_marginTop="10dp"/>
 

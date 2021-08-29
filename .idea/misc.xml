@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/activity_login.xml" value="0.10371376811594203" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/activity_main.xml" value="0.13269927536231885" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/activity_register.xml" value="0.1213768115942029" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/activity_start.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/fotos_item.xml" value="0.19021739130434784" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/fragment_album.xml" value="0.19429347826086957" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/fragment_chest.xml" value="0.19429347826086957" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Naruto/app/src/main/res/layout/fragment_shop.xml" value="0.19429347826086957" />

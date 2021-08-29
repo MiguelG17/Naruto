@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,6 +27,7 @@ import java.util.HashMap;
 public class RegisterActivity extends AppCompatActivity {
     EditText username, email, password;
     Button register;
+    TextView txt_login;
 
     FirebaseAuth auth;
     DatabaseReference reference;
@@ -41,8 +43,16 @@ public class RegisterActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         register = findViewById(R.id.register);
+        txt_login = findViewById(R.id.txt_login);
 
         auth = FirebaseAuth.getInstance();
+
+        txt_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+            }
+        });
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override

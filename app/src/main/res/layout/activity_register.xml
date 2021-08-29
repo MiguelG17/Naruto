@@ -12,7 +12,7 @@
         android:id="@+id/username"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:hint="Username"
+        android:hint="@string/username"
         android:layout_marginTop="15dp"
         android:padding="15dp"/>
 
@@ -20,7 +20,7 @@
         android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:hint="Email"
+        android:hint="@string/email"
         android:layout_marginTop="15dp"
         android:padding="15dp"/>
 
@@ -28,7 +28,7 @@
         android:id="@+id/password"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:layout_marginTop="15dp"
         android:padding="15dp"/>
 
@@ -37,6 +37,12 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
-        android:text="Register"/>
+        android:text="@string/register"/>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="@string/count"
+        android:id="@+id/txt_login"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
