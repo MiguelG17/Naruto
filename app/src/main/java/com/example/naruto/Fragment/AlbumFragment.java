@@ -137,7 +137,7 @@ public class AlbumFragment extends Fragment {
                     if(nameCards.contains(cards.getUsername())){
                         cardsList.add(cards);
                     }else{
-                        Cards cards1 = new Cards(cards.getNumber(),cards.getUsername(),"https://firebasestorage.googleapis.com/v0/b/naruto-database-89a36.appspot.com/o/temporal.jpg?alt=media&token=15f68bee-9353-4479-a7c7-4fb9710fda10",cards.getCategory());
+                        Cards cards1 = new Cards(cards.getNumber(),cards.getUsername(),"https://firebasestorage.googleapis.com/v0/b/naruto-database-89a36.appspot.com/o/blanco.png?alt=media&token=25fdca3c-45b6-4d88-a6b1-24f1188598a4",cards.getCategory());
                         cardsList.add(cards1);
                     }
 

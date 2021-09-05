@@ -7,5 +7,11 @@
     <string name="username">Username</string>
     <string name="register">Register</string>
     <string name="count">Already have an account? Log in</string>
+    <string name="all_files">All files are required!</string>
+    <string name="password_characters">Password must have at least 6 characters.</string>
+    <string name="you_cant">You can\'t register with this email or password.</string>
+    <string name="fail_auth">Authentication failed.</string>
+    <string name="please">Please wait...</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
 </resources>

@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference reference;
 
 
-Button out;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

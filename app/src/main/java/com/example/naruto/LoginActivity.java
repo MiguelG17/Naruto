@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 String str_password = password.getText().toString();
 
                 if (TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)){
-                    Toast.makeText(LoginActivity.this, "All fields are required!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, R.string.all_files, Toast.LENGTH_SHORT).show();
                     pd.dismiss();
                 } else {
 
@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                                         });
                                     } else {
                                         pd.dismiss();
-                                        Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, R.string.fail_auth, Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });

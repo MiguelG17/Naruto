@@ -5,11 +5,13 @@ public class User {
     private String id;
     private String username;
     private String list;
+    private String coin;
 
-    public User(String id, String username, String list) {
+    public User(String id, String username, String list,String coin) {
         this.id = id;
         this.username = username;
         this.list = list;
+        this.coin = coin;
     }
 
     public User(){}
@@ -36,5 +38,13 @@ public class User {
 
     public void setList(String list) {
         this.list = list;
+    }
+
+    public String getCoin() {
+        return coin;
+    }
+
+    public void setCoin(String coin) {
+        this.coin = coin;
     }
 }

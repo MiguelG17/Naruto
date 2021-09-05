@@ -8,4 +8,10 @@
     <string name="username">Nombre de usuario</string>
     <string name="register">Registrar</string>
     <string name="count">¿Ya tienes una cuenta? Inicia sesión</string>
+    <string name="all_files">¡Todos los campos son necesarios!</string>
+    <string name="password_characters">La contraseña debe tener al menos 6 caracteres.</string>
+    <string name="you_cant">No puedes registrarte con este email o contraseña.</string>
+    <string name="fail_auth">Fallo de autentificación.</string>
+    <string name="please">Espere por favor</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

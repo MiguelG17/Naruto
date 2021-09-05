@@ -66,10 +66,10 @@ public class RegisterActivity extends AppCompatActivity {
                 String str_password = password.getText().toString();
 
                 if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)) {
-                    Toast.makeText(RegisterActivity.this,"All files are required!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this,R.string.all_files,Toast.LENGTH_SHORT).show();
                     pd.dismiss();
                 } else if (str_password.length() < 6) {
-                    Toast.makeText(RegisterActivity.this, "Password must have at least 6 characters", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, R.string.password_characters, Toast.LENGTH_SHORT).show();
                     pd.dismiss();
                 } else {
                    // pd.dismiss();
@@ -94,6 +94,8 @@ public class RegisterActivity extends AppCompatActivity {
                         HashMap<String, Object> hashMap = new HashMap<>();
                         hashMap.put("id",userid);
                         hashMap.put("username",username.toLowerCase());
+                        hashMap.put("list","");
+                        hashMap.put("coin","0");
                        // hashMap.put("imageurl","https://firebasestorage.googleapis.com/v0/b/blindchat2.appspot.com/o/userimage.jpg?alt=media&token=9f828f03-8ca3-45e8-9630-40ae214581ca");
 
                         reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -118,7 +120,7 @@ public class RegisterActivity extends AppCompatActivity {
                     } else{
 
                         pd.dismiss();
-                        Toast.makeText(RegisterActivity.this, "You can't register with this email or password",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, R.string.you_cant,Toast.LENGTH_SHORT).show();
                         Exception e = task.getException();
                         Log.e("TAG", e.getMessage());
                     }

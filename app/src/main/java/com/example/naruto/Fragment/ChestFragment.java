@@ -1,14 +1,32 @@
 package com.example.naruto.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
+import com.example.naruto.Model.User;
 import com.example.naruto.R;
+import com.example.naruto.RandomActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +34,12 @@ import com.example.naruto.R;
  * create an instance of this fragment.
  */
 public class ChestFragment extends Fragment {
+
+    FirebaseUser firebaseUser;
+    TextView text_coins;
+    ImageButton cero_cero;
+    DatabaseReference reference;
+    User user;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,9 +84,77 @@ public class ChestFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_chest, container, false);
+        text_coins = view.findViewById(R.id.text_coins);
+        cero_cero = view.findViewById(R.id.cero_cero);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                 user = dataSnapshot.getValue(User.class);
+                text_coins.setText(user.getCoin());
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        cero_cero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                        if(checkCoin(1)) {
+                            Intent intent = new Intent(getContext(), RandomActivity.class);
+                            intent.putExtra("number",1);
+                            startActivity(intent);
+
+                        }
+
+            }
+        });
+
+      //  startActivity(new Intent(getContext(), AdActivity.class));
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chest, container, false);
+        return view;
     }
+
+    private void updateProfile(String coin ){
+         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+
+        HashMap<String,Object> hashMap = new HashMap<>();
+        hashMap.put("coin",coin);
+
+
+        reference.updateChildren(hashMap);
+    }
+
+    private boolean checkCoin(int i){
+        int coinUser = Integer.parseInt(user.getCoin());
+        boolean retorno = false;
+
+        switch (i){
+            case 1:
+                if(coinUser >= 50){
+                    coinUser = coinUser - 50;
+                    user.setCoin(String.valueOf(coinUser));
+                    updateProfile(user.getCoin());
+                    retorno = true;
+                }else{
+                    retorno = false;
+                    Toast.makeText(getContext(),"No tienes suficientes monedas",Toast.LENGTH_LONG).show();
+                }
+
+                break;
+            default:
+               retorno = false;
+                break;
+        }
+       return retorno;
+
+    }
+
+
+
 }

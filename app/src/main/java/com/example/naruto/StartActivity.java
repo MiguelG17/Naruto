@@ -35,7 +35,7 @@ public class StartActivity extends AppCompatActivity {
 
         //redirect if user is not null
         if(firebaseUser != null){
-         //   prueba();
+          //  prueba();
             startActivity(new Intent(StartActivity.this,MainActivity.class));
             finish();
         }
@@ -67,35 +67,17 @@ public class StartActivity extends AppCompatActivity {
 
     private void prueba(){
 
-        String number ="1";
+       // int numberInt = 2;
+        for(int i = 2; i < 10;i++) {
+            reference = FirebaseDatabase.getInstance().getReference().child("Cards").child(String.valueOf(i));
 
-        reference = FirebaseDatabase.getInstance().getReference().child("Cards").child(number);
+            HashMap<String, Object> hashMap = new HashMap<>();
+            hashMap.put("number", String.valueOf(i));
+            hashMap.put("username", "");
+            hashMap.put("category", "");
+            hashMap.put("imageurl", "");
+            reference.updateChildren(hashMap);
+        }
 
-        HashMap<String, Object> hashMap = new HashMap<>();
-        hashMap.put("number",number);
-        hashMap.put("username","sasuke");
-        hashMap.put("category","normal");
-        hashMap.put("imageurl","https://firebasestorage.googleapis.com/v0/b/naruto-database-89a36.appspot.com/o/Sasuke.png?alt=media&token=5d5ca06c-41f1-4db8-af28-2fc7a946f93d");
-
-
-        reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-
-                    Exception e = task.getException();
-
-//                    Log.e("TAG", e.getMessage());
-                    Intent intent = new Intent();
-                 //   Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                }else{
-
-                    Exception e = task.getException();
-
-                    Log.e("TAG", e.getMessage());
-                }
-            }
-        });
     }
 }
