@@ -143,7 +143,7 @@ public class AlbumFragment extends Fragment {
 
 
                 }
-                Collections.reverse(cardsList);
+               // Collections.reverse(cardsList);
                 albumAdapter.notifyDataSetChanged();
             }
 
